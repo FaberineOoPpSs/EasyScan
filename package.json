@@ -1,0 +1,14 @@
+{
+  "name": "easyscan",
+  "version": "1.0.0",
+  "description": "Built as a part of Sparkathon challenge to display qr code for more info on groceries in walmart",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express-generator": "^4.16.1"
+  }
+}
