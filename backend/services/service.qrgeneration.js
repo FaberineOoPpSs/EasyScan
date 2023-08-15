@@ -25,7 +25,7 @@ module.exports = {
             const canvas = createCanvas(150, 150);
             QRCode.toCanvas(
                 canvas,
-                'https://www.google.com/',
+                genLink,
                 {
                     errorCorrectionLevel: "H",
                     margin: 1,
@@ -38,8 +38,8 @@ module.exports = {
 
             const ctx = canvas.getContext("2d");
             const img = await loadImage('../backend/public/images/icons.png');
-            const center = (100) / 2;
-            ctx.drawImage(img, 44, 44, 40, 40);
+            //const center = (100) / 2;
+            ctx.drawImage(img, 50, 50, 50, 50);
             let base64string = canvas.toDataURL("image/png");
             let base64Image = base64string.split(';base64,').pop();
             fs.writeFile(filePath, base64Image, {encoding: 'base64'}, function(err) {
