@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const qrServices = require('../services/service.qrgeneration');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/test', qrServices.test);
+router.post('/genQR', qrServices.generateQR);
 
 module.exports = router;
