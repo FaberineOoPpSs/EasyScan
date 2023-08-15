@@ -6,37 +6,8 @@ const { createCanvas, loadImage } = require("canvas");
 module.exports = {
     test: async(req, res) => {
         try{
-            const canvas = createCanvas(150, 150);
-            QRCode.toCanvas(
-                canvas,
-                'https://www.google.com/',
-                {
-                    errorCorrectionLevel: "H",
-                    margin: 1,
-                    color:  {
-                        dark: "#0f1d45",
-                        light: "#ffffff",
-                    },
-                }
-            );
-
-            const ctx = canvas.getContext("2d");
-            const img = await loadImage('../backend/public/images/icons.png');
-            const center = (100) / 2;
-            ctx.drawImage(img, 44, 44, 40, 40);
-            let base64string = canvas.toDataURL("image/png");
-            let base64Image = base64string.split(';base64,').pop();
-            fs.writeFile('../qrCodes/sampleQR2.png', base64Image, {encoding: 'base64'}, function(err) {
-                console.log('File created');
-            });
             
-            res.status(201).send({
-                success: "working"
-            });
-
-
         } catch(err) {
-            console.log(err);
             res.status(500).send({
                 error: err
             })
