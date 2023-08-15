@@ -7,16 +7,19 @@ import Imagebar from './Components/Imagebar';
 import Table from './Components/Table';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from './Components/Carousel';
+import Form from './Components/Form';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Header />
+
         <Carousel />
+        <Form/>
         <Imagebar />
         <Table />
-       
+     
         <Routes>
         
           {/* <Route path="/" element={<Carousel />} /> */}
