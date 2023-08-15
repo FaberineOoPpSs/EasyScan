@@ -1,0 +1,73 @@
+[
+    {
+      "ProdId": "1",
+      "ShelfId": "S101",
+      "Prodimg": "product123.jpg",
+      "Nutrinfo": "base64_nutritional_info_image_1",
+      "Details": "Apple is a crisp and juicy fruit, often red or green, with a sweet or tart flavor.",
+      "Mfg": "2023-08-15",
+      "Exp": "2023-09-15",
+      "Sellerinfo": {
+        "SellerName": "FreshGroceries",
+        "SellerAddress": "123 Main St, City, Country",
+        "SellerContact": "contact@freshgroceries.com"
+      }
+    },
+    {
+      "ProdId": "2",
+      "ShelfId": "S102",
+      "Prodimg": "product124.jpg",
+      "Nutrinfo": "base64_nutritional_info_image_2",
+      "Details": "Potato is a starchy, versatile vegetable known for its wide culinary uses, such as fries and mashed potatoes.",
+      "Mfg": "2023-08-05",
+      "Exp": "2023-10-15",
+      "Sellerinfo": {
+        "SellerName": "HealthyFoods",
+        "SellerAddress": "456 Elm St, City, Country",
+        "SellerContact": "contact@healthyfoods.com"
+      }
+    },
+    {
+      "ProdId": "3",
+      "ShelfId": "S102",
+      "Prodimg": "product124.jpg",
+      "Nutrinfo": "base64_nutritional_info_image_2",
+      "Details": "Milk is a nutrient-rich liquid produced by mammals, commonly consumed as a source of calcium and protein.",
+      "Mfg": "2023-08-05",
+      "Exp": "2023-08-07",
+      "Sellerinfo": {
+        "SellerName": "MotherDairy",
+        "SellerAddress": "456 Elm St, City, Country",
+        "SellerContact": "contact@healthyfoods.com"
+      }
+    },
+    {
+      "ProdId": "4",
+      "ShelfId": "S102",
+      "Prodimg": "product124.jpg",
+      "Nutrinfo": "base64_nutritional_info_image_2",
+      "Details": "Cheese is a dairy product created by coagulating milk, known for its diverse flavors and textures.",
+      "Mfg": "2023-08-05",
+      "Exp": "2023-10-15",
+      "Sellerinfo": {
+        "SellerName": "MotherDairy",
+        "SellerAddress": "456 Elm St, City, Country",
+        "SellerContact": "contact@healthyfoods.com"
+      }
+    },
+    {
+      "ProdId": "5",
+      "ShelfId": "S102",
+      "Prodimg": "product124.jpg",
+      "Nutrinfo": "base64_nutritional_info_image_2",
+      "Details": "Bread is a staple food made from flour, water, and yeast, baked to create a versatile and nourishing carbohydrate source.",
+      "Mfg": "2023-08-05",
+      "Exp": "2023-08-07",
+      "Sellerinfo": {
+        "SellerName": "HealthyFoods",
+        "SellerAddress": "456 Elm St, City, Country",
+        "SellerContact": "contact@healthyfoods.com"
+      }
+    }
+  ]
+  
