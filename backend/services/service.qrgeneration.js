@@ -57,6 +57,9 @@ module.exports = {
             })
         }
     },
+    testOne: async(req, res) => {
+
+    },
     generateQR: async(req, res) => {
         try{
             //Create link for item
