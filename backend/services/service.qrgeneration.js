@@ -19,6 +19,7 @@ module.exports = {
             var link = 'http://localhost:3000';
             const shelfId = req.body.shelfid;
             const prodId = req.body.prodid;
+            console.log(prodId);
             let genLink = link + '/' + shelfId + '/' + prodId;
             let filePath = '../qrCodes/' + shelfId + '_' + prodId + '.png';
 
