@@ -1,5 +1,5 @@
 var QRCode = require('qrcode');
-var jimp = require('jimp');
+//var jimp = require('jimp');
 var fs = require('fs');
 const { createCanvas, loadImage } = require("canvas");
 
