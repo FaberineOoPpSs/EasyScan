@@ -1,28 +1,57 @@
-import React from 'react'
-import "./Form.css"
-function Form() {
+import React, { useState } from "react";
+import axios from "axios";
+import "./Form.css";
+
+const PostForm = () => {
+  const [formData, setFormData] = useState({
+    title: "",
+    content: ""
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await axios.post("/api/endpoint", formData);
+      console.log(response.data);
+      // Handle success or show a message to the user
+    } catch (error) {
+      console.error(error);
+      // Handle error or show an error message to the user
+    }
+  };
+
   return (
-    <div>
-        {/* here to write api endpoint */}
-<form action="" method="get" class="form-example">
-  <div class="form-example">
-    <label for="name">Enter Product ID: </label>
-    <input type="text" name="name" id="name" required />
-  </div>
-  <div class="form-example">
-    {/* <label for="email">Enter your email: </label> */}
-    {/* <input type="email" name="email" id="email" required /> */}
-  </div>
-  <div class="form-example">
-    <input type="submit" value="Search" />
-  </div>
-</form>
-
-
-
-
+    <div className="form-container">
+      <h2 className="form-title">Search for the product item</h2>
+      <form onSubmit={handleSubmit} className="form-example">
+        <div className="form-input-group">
+          <label htmlFor="title" className="form-input-label">
+            Enter Product ID:
+          </label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            value={formData.title}
+            onChange={handleInputChange}
+            className="form-input"
+          />
+          <button type="submit" className="form-button">
+            Search
+          </button>
+        </div>
+      </form>
     </div>
-  )
-}
+  );
+};
 
-export default Form
+export default PostForm;
