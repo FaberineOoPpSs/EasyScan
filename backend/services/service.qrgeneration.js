@@ -42,11 +42,12 @@ module.exports = {
             ctx.drawImage(img, 50, 50, 50, 50);
             let base64string = canvas.toDataURL("image/png");
             let base64Image = base64string.split(';base64,').pop();
+
             fs.writeFile(filePath, base64Image, {encoding: 'base64'}, function(err) {
-                console.log('File created');
+                //console.log('File created');
             });
             res.status(201).send({
-                success: "working"
+                qrCode: base64string 
             })
         } catch(err) {
             console.log(err)
