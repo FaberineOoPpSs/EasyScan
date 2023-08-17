@@ -9,7 +9,19 @@ module.exports = {
                 let values = JSON.parse(data);
                 for(let i = 0; i < values.length; i++) {
                     if(Number(values[i].ProdId) == Number(prodId)) {
-                        res.status(200).send(values[i]);
+                        let val = JSON.parse(`{
+                            "prodId": \"${values[i].ProdId}\",
+                            "shelfId": \"${values[i].ShelfId}\", 
+                            "prodImg": \"${values[i].Prodimg}\",
+                            "nutInfo": \"${values[i].Nutrinfo}\",
+                            "desc": \"${values[i].Details}\",
+                            "mfg": \"${values[i].Mfg}\",
+                            "exp": \"${values[i].Exp}\",
+                            "sName": \"${values[i].Sellerinfo.SellerName}\",
+                            "sAddr": \"${values[i].Sellerinfo.SellerAddress}\",
+                            "sCont": \"${values[i].Sellerinfo.SellerContact}\"
+                        }`)
+                        res.status(200).send(val);
                         break;
                     }
                 }

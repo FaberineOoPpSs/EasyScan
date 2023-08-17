@@ -16,7 +16,7 @@ module.exports = {
     
     generateQR: async(req, res) => {
         try{
-            var link = 'http://localhost:3000';
+            var link = 'http://localhost:4200/products';
             const shelfId = req.body.shelfid;
             const prodId = req.body.prodid;
             console.log(prodId);
