@@ -17,11 +17,13 @@ const PostForm = () => {
   };
 
   const handleSubmit = async (event) => {
+    let baseLink = 'http://localhost:5000/';
     event.preventDefault();
 
     try {
-      const response = await axios.post("/api/endpoint", formData);
-      console.log(response.data);
+      const fullLink = baseLink + 'itemData/'
+      const response = await axios.post(fullLink, formData);
+      console.log("Received response: ", response.data);
       // Handle success or show a message to the user
     } catch (error) {
       console.error(error);
